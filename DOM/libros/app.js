@@ -61,6 +61,7 @@ function getLibros() {
     fila.innerHTML = celdas;
 
     cuerpoTabla.append(fila);
+
   });
 }
 
@@ -83,3 +84,14 @@ document.getElementById("bookForm").addEventListener("submit", (event) => {
   agregarLibro();
   getLibros();
 });
+// Función para limpiar los inputs
+const limpiarFormulario = () => {
+  inputNombre.value = "";
+  inputAutor.value = "";
+  inputAnio.value = "";
+  inputDescripcion.value = "";
+  inputNombre.focus();
+};
+
+// Evento click para el botón limpiar
+document.getElementById("btnLimpiar").addEventListener("click", limpiarFormulario);
